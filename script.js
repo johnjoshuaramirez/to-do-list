@@ -1,9 +1,10 @@
 const inputBox = document.querySelector(".inputField input"),
-addBtn = document.querySelector(".inputField button");
+addBtn = document.querySelector(".inputField button"),
+todoList = document.querySelector(".todoList");
 
 inputBox.addEventListener("keyup", (e) => {
    let userData = inputBox.value;
-   if (e.target.value.trim().length) {
+   if (userData.trim().length) {
       addBtn.classList.add("active");
    } else {
       addBtn.classList.remove("active");
@@ -20,4 +21,22 @@ addBtn.addEventListener("click", () => {
    }
    listArr.push(userData);
    localStorage.setItem("New Todo", JSON.stringify(listArr));
+   showTasks();
 });
+
+function showTasks() {
+   let getLocalStorage = localStorage.getItem("New Todo");
+
+   if (getLocalStorage == null) {
+      listArr = [];
+   } else {
+      listArr = JSON.parse(getLocalStorage);
+   }
+
+   let li = "";
+
+   listArr.forEach((element, index) => {
+      li = `<li>${element} <span><i class="fas fa-trash"></i></span></li>`
+   });
+   todoList.innerHTML += li;
+}
