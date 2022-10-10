@@ -3,14 +3,16 @@ addBtn = document.querySelector(".inputField button"),
 todoList = document.querySelector(".todoList"),
 deleteAllBtn = document.querySelector(".footer button");
 
-inputBox.addEventListener("keyup", (e) => {
+inputBox.addEventListener("keyup", () => {
    let userData = inputBox.value;
-   if (userData.trim().length) {
+   if (userData != 0) {
       addBtn.classList.add("active");
    } else {
       addBtn.classList.remove("active");
    }
 });
+
+showTasks();
 
 addBtn.addEventListener("click", () => {
    let userData = inputBox.value;
@@ -22,6 +24,7 @@ addBtn.addEventListener("click", () => {
    }
    listArr.push(userData);
    localStorage.setItem("New Todo", JSON.stringify(listArr));
+   addBtn.classList.remove("active");
    showTasks();
 });
 
