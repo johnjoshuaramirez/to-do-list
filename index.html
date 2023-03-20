@@ -7,7 +7,7 @@
 		<title>to-do-list</title>
 		<script src="https://kit.fontawesome.com/4f8a1b6b57.js" crossorigin="anonymous"></script>
 		<link rel="stylesheet" href="style.css" />
-		<script src="script.js" defer></script>
+		<script src="./src/index.js" defer></script>
 	</head>
 	<body>
 		<header class="header">
@@ -41,6 +41,7 @@
 							<button class="nav__button nav__button--project">
 								<i class="fa-solid fa-list-check"></i>Sample Project
 							</button>
+                     <i class="fa-solid fa-xmark"></i>
 						</li>
 					</ul>
                <div class="nav__item">
@@ -59,14 +60,16 @@
 							<p class="main__text">Sample Inbox Text</p>
 						</div>
 						<div class="main__item-right">
-							<p>Add Due Date</p>
+							<p class="main__text">No Date</p>
 							<i class="fa-solid fa-xmark"></i>
 						</div>
 					</li>
 				</ul>
-				<button class="main__button main__button--add-task">
-					<i class="fa-solid fa-plus"></i>Add Task
-				</button>
+            <div class="main__item">
+               <button class="main__button main__button--add-task">
+                  <i class="fa-solid fa-plus"></i>Add Task
+               </button>
+            </div>
 			</section>
 			<section class="main__section main__section--today">
 				<h1 class="main__title">Today</h1>
@@ -81,6 +84,6 @@
 				</ul>
 			</section>
 		</main>
-		<footer class="footer">to-do-list</footer>
+		
 	</body>
 </html>
