@@ -33,6 +33,11 @@ nav {
    background-color: lightgray;
 }
 
+.nav__title {
+   margin-top: 1rem;
+   padding: 1rem;
+}
+
 .main__section {
    padding: 1rem;
 }
@@ -43,12 +48,25 @@ nav {
    display: none;
 }
 
+nav {
+   min-width: 250px;
+}
+
 .nav__list {
    padding: 0;
 }
 
 .nav__item {
    list-style-type: none;
+   padding: 1rem;
+}
+
+.main__section {
+   width: 100%;
+}
+
+.main__title {
+   margin-bottom: 1rem;
 }
 
 .main__list {
@@ -57,6 +75,22 @@ nav {
 
 .main__item {
    list-style-type: none;
+   display: flex;
+}
+
+.main__item-left {
+   display: flex;
+   gap: 1rem;
+}
+
+.main__item-right {
+   display: flex;
+   gap: 1rem;
+   margin-left: auto;
+}
+
+.main__button {
+   margin-top: 1rem;
 }
 
 footer {
