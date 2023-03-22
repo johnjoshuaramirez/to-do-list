@@ -1,126 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>to-do-list</title>
-		<script src="https://kit.fontawesome.com/4f8a1b6b57.js" crossorigin="anonymous"></script>
-		<link rel="stylesheet" href="style.css" />
-		<script src="./src/index.js" defer></script>
-	</head>
-	<body>
-		<!-- header -->
-		<header class="header">
-			<div class="header__title">to-do-list</div>
-		</header>
-		<main class="main">
-			<!-- side bar navigation -->
-			<nav class="nav">
-				<section class="nav__section">
-					<ul class="nav__list">
-						<li class="nav__item nav__item--tasks">
-							<button class="nav__button nav__button--tasks">
-								<i class="fa-solid fa-inbox"></i>Tasks
-							</button>
-						</li>
-						<li class="nav__item nav__item--today">
-							<button class="nav__button nav__button--today">
-								<i class="fa-solid fa-calendar-day"></i>Today
-							</button>
-						</li>
-						<li class="nav__item nav__item--this-week">
-							<button class="nav__button nav__button--this-week">
-								<i class="fa-solid fa-calendar-week"></i>This week
-							</button>
-						</li>
-					</ul>
-				</section>
-				<section class="nav__section">
-					<h2 class="nav__title">Projects</h2>
-					<ul class="nav__list">
-						<li class="nav__item nav__item--project">
-							<button class="nav__button nav__button--project">
-								<i class="fa-solid fa-list-check"></i>Sample Project
-							</button>
-                     <i class="fa-solid fa-xmark"></i>
-						</li>
-					</ul>
-               <div class="nav__item nav__item--add-project">
-                  <button class="nav__button nav__button--add-project">
-                     <i class="fa-solid fa-plus"></i>Add Project
-                  </button>
-               </div>
-				</section>
-			</nav>
-			<!-- main section tasks -->
-			<section class="main__section main__section--tasks">
-				<h1 class="main__title">Tasks</h1>
-				<ul class="main__list main__list--tasks">
-					<li class="main__item">
-						<div class="main__item-left">
-							<i class="fa-regular fa-square"></i>
-							<p class="main__text">Sample Tasks Text</p>
-						</div>
-						<div class="main__item-right">
-							<p class="main__text main__text--due-date">No Due Date</p>
-						</div>
-						<i class="fa-solid fa-xmark"></i>
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>to-do-list</title>
+	<script src="https://kit.fontawesome.com/4f8a1b6b57.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="style.css" />
+	<script src="./src/index.js" defer></script>
+</head>
+
+<body>
+	<!-- header -->
+	<header class="header">
+		<div class="header__title">to-do-list</div>
+	</header>
+	<main class="main">
+		<!-- side bar navigation -->
+		<nav class="nav">
+			<section class="nav__section">
+				<ul class="nav__list">
+					<li class="nav__item nav__item--tasks">
+						<button class="nav__button nav__button--tasks">
+							<i class="fa-solid fa-inbox"></i>Tasks
+						</button>
+					</li>
+					<li class="nav__item nav__item--today">
+						<button class="nav__button nav__button--today">
+							<i class="fa-solid fa-calendar-day"></i>Today
+						</button>
+					</li>
+					<li class="nav__item nav__item--this-week">
+						<button class="nav__button nav__button--this-week">
+							<i class="fa-solid fa-calendar-week"></i>This week
+						</button>
 					</li>
 				</ul>
 			</section>
-			<!-- main section today -->
-			<section class="main__section main__section--today hidden">
-				<h1 class="main__title">Today</h1>
-				<ul class="main__list main__list--today">
-					<li class="main__item">
-						<div class="main__item-left">
-							<i class="fa-regular fa-square"></i>
-							<p class="main__text">Sample Today Text</p>
-						</div>
-						<div class="main__item-right">
-							<p class="main__text main__text--due-date">No Due Date</p>
-						</div>
+			<section class="nav__section">
+				<h2 class="nav__title">Projects</h2>
+				<ul class="nav__list">
+					<li class="nav__item nav__item--project">
+						<button class="nav__button nav__button--project">
+							<i class="fa-solid fa-list-check"></i>Sample Project
+						</button>
 						<i class="fa-solid fa-xmark"></i>
 					</li>
 				</ul>
-			</section>
-			<!-- main section this week -->
-			<section class="main__section main__section--this-week hidden">
-				<h1 class="main__title">This week</h1>
-				<ul class="main__list main__list--this-week">
-					<li class="main__item">
-						<div class="main__item-left">
-							<i class="fa-regular fa-square"></i>
-							<p class="main__text">Sample This Week Text</p>
-						</div>
-						<div class="main__item-right">
-							<p class="main__text main__text--due-date">No Due Date</p>
-						</div>
-						<i class="fa-solid fa-xmark"></i>
-					</li>
-				</ul>
-			</section>
-			<section class="main__section main__section--project hidden">
-				<h1 class="main__title">Sample Project</h1>
-				<ul class="main__list main__list--tasks">
-					<li class="main__item">
-						<div class="main__item-left">
-							<i class="fa-regular fa-square"></i>
-							<p class="main__text">Sample Tasks Text</p>
-						</div>
-						<div class="main__item-right">
-							<p class="main__text main__text--due-date">No Due Date</p>
-						</div>
-						<i class="fa-solid fa-xmark"></i>
-					</li>
-				</ul>
-				<div class="main__item">
-					<button class="main__button main__button--add-task">
-						<i class="fa-solid fa-plus"></i>Add Task
+				<div class="nav__item nav__item--input-group">
+					<input class="nav__input" type="text">
+					<div class="nav__actions">
+					  <button class="nav__button nav__button--add">Add</button>
+					  <button class="nav__button nav__button--cancel">Cancel</button>
+					</div>
+				 </div>
+				<div class="nav__item nav__item--add-project">
+					<button class="nav__button nav__button--add-project">
+						<i class="fa-solid fa-plus"></i>Add Project
 					</button>
 				</div>
 			</section>
-		</main>		
-	</body>
+		</nav>
+		<!-- main section tasks -->
+		<section class="main__section main__section--tasks">
+			<h1 class="main__title">Tasks</h1>
+			<ul class="main__list main__list--tasks">
+				<li class="main__item">
+					<div class="main__item-left">
+						<i class="fa-regular fa-square"></i>
+						<p class="main__text">Sample Tasks Text</p>
+					</div>
+					<div class="main__item-right">
+						<p class="main__text main__text--due-date">No Due Date</p>
+					</div>
+					<i class="fa-solid fa-xmark"></i>
+				</li>
+			</ul>
+		</section>
+		<!-- main section today -->
+		<section class="main__section main__section--today hidden">
+			<h1 class="main__title">Today</h1>
+			<ul class="main__list main__list--today">
+				<li class="main__item">
+					<div class="main__item-left">
+						<i class="fa-regular fa-square"></i>
+						<p class="main__text">Sample Today Text</p>
+					</div>
+					<div class="main__item-right">
+						<p class="main__text main__text--due-date">No Due Date</p>
+					</div>
+					<i class="fa-solid fa-xmark"></i>
+				</li>
+			</ul>
+		</section>
+		<!-- main section this week -->
+		<section class="main__section main__section--this-week hidden">
+			<h1 class="main__title">This week</h1>
+			<ul class="main__list main__list--this-week">
+				<li class="main__item">
+					<div class="main__item-left">
+						<i class="fa-regular fa-square"></i>
+						<p class="main__text">Sample This Week Text</p>
+					</div>
+					<div class="main__item-right">
+						<p class="main__text main__text--due-date">No Due Date</p>
+					</div>
+					<i class="fa-solid fa-xmark"></i>
+				</li>
+			</ul>
+		</section>
+		<section class="main__section main__section--project hidden">
+			<h1 class="main__title">Sample Project</h1>
+			<ul class="main__list main__list--tasks">
+				<li class="main__item">
+					<div class="main__item-left">
+						<i class="fa-regular fa-square"></i>
+						<p class="main__text">Sample Tasks Text</p>
+					</div>
+					<div class="main__item-right">
+						<p class="main__text main__text--due-date">No Due Date</p>
+					</div>
+					<i class="fa-solid fa-xmark"></i>
+				</li>
+			</ul>
+			<div class="main__item">
+				<button class="main__button main__button--add-task">
+					<i class="fa-solid fa-plus"></i>Add Task
+				</button>
+			</div>
+		</section>
+	</main>
+</body>
+
 </html>

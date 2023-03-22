@@ -77,13 +77,50 @@ nav {
 }
 
 .nav__item:hover {
-   background-color: gray;
+   background-color: rgba(128, 128, 128, 0.5);
+}
+
+.nav__item--input-group {
+   display: flex;
+   flex-direction: column;
+}
+
+.nav__item--input-group:hover {
+   background-color: initial;
+}
+
+.nav__input {
+   background-color: black;
+   border: 1px solid gray;
+   margin-bottom: .5rem;
+   border-radius: .25rem;
+   height: 1.75rem;
+   padding: .5rem;
+}
+
+.nav__actions {
+   display: flex;
+   gap: 1rem;
+   justify-content: space-between;
 }
 
 .nav__button {
    border: none;
-   background-color: inherit;
+   background: none;
    cursor: pointer;
+}
+
+.nav__button--add {
+   border: 1px solid green;
+   width: 50%;
+   height: 1.75rem;
+   border-radius: .25rem;
+}
+
+.nav__button--cancel {
+   border: 1px solid red;
+   width: 50%;
+   border-radius: .25rem;
 }
 
 .main__section {
@@ -114,12 +151,12 @@ nav {
 }
 
 .main__item:hover {
-   background-color: gray;
+   background-color: rgba(128, 128, 128, 0.5);
 }
 
 .main__button {
    border: none;
-   background: inherit;
+   background: none;
    cursor: pointer;
 }
 
