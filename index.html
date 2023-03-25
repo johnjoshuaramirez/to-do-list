@@ -8,63 +8,68 @@
 	<title>to-do-list</title>
 	<script src="https://kit.fontawesome.com/4f8a1b6b57.js" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="style.css" />
-	<script src="./src/index.js" defer></script>
+	<script defer src="script.js"></script>
 </head>
 
 <body>
-	<!-- header -->
+	<!-- Header -->
 	<header class="header">
 		<div class="header__title">to-do-list</div>
 	</header>
 	<main class="main">
-		<!-- side bar navigation -->
+		<!-- Navigation Bar -->
 		<nav class="nav">
+			<!-- Tasks, Today, This week Section  -->
 			<section class="nav__section">
 				<ul class="nav__list">
-					<li class="nav__item nav__item--tasks">
-						<button class="nav__button nav__button--tasks">
-							<i class="fa-solid fa-inbox"></i>Tasks
+					<li class="nav__item nav__item--all-tasks" data-nav-item-all-tasks>
+						<button class="nav__button nav__button--all-tasks">
+							<i class="fa-solid fa-inbox"></i>All Tasks
 						</button>
 					</li>
-					<li class="nav__item nav__item--today">
+					<li class="nav__item nav__item--today" data-nav-item-today>
 						<button class="nav__button nav__button--today">
 							<i class="fa-solid fa-calendar-day"></i>Today
 						</button>
 					</li>
-					<li class="nav__item nav__item--this-week">
+					<li class="nav__item nav__item--this-week" data-nav-item-this-week>
 						<button class="nav__button nav__button--this-week">
 							<i class="fa-solid fa-calendar-week"></i>This week
 						</button>
 					</li>
 				</ul>
 			</section>
+			<!-- Projects Section -->
 			<section class="nav__section">
 				<h2 class="nav__title">Projects</h2>
-				<ul class="nav__list">
-					<li class="nav__item nav__item--project">
+				<!-- Projects List  -->
+				<ul class="nav__list nav__list--project" data-nav-list-project>
+					<!-- <li class="nav__item nav__item--project">
 						<button class="nav__button nav__button--project">
 							<i class="fa-solid fa-list-check"></i>Sample Project
 						</button>
-						<i class="fa-solid fa-xmark"></i>
-					</li>
+						<i class="fa-solid fa-xmark" data-nav-x-mark></i>
+					</li> -->
 				</ul>
-				<div class="nav__item nav__item--input-group">
-					<input class="nav__input" type="text">
+				<!-- Nav Input Group  -->
+				<div class="nav__item nav__item--input-group hidden" data-nav-item-input-group>
+					<input class="nav__input" data-nav-input type="text">
 					<div class="nav__actions">
-					  <button class="nav__button nav__button--add">Add</button>
-					  <button class="nav__button nav__button--cancel">Cancel</button>
+					  <button class="nav__button nav__button--add" data-nav-button-add>Add</button>
+					  <button class="nav__button nav__button--cancel" data-nav-button-cancel>Cancel</button>
 					</div>
 				 </div>
-				<div class="nav__item nav__item--add-project">
+            <!-- Add Project Button -->
+				<div class="nav__item nav__item--add-project" data-nav-item-add-project>
 					<button class="nav__button nav__button--add-project">
 						<i class="fa-solid fa-plus"></i>Add Project
 					</button>
 				</div>
 			</section>
 		</nav>
-		<!-- main section tasks -->
-		<section class="main__section main__section--tasks">
-			<h1 class="main__title">Tasks</h1>
+		<!-- Main Section Tasks -->
+		<section class="main__section main__section--tasks" data-main-section-task>
+			<h1 class="main__title">All Tasks</h1>
 			<ul class="main__list main__list--tasks">
 				<li class="main__item">
 					<div class="main__item-left">
@@ -78,7 +83,7 @@
 				</li>
 			</ul>
 		</section>
-		<!-- main section today -->
+		<!-- Main Section Today -->
 		<section class="main__section main__section--today hidden">
 			<h1 class="main__title">Today</h1>
 			<ul class="main__list main__list--today">
@@ -94,7 +99,7 @@
 				</li>
 			</ul>
 		</section>
-		<!-- main section this week -->
+		<!-- Main Section This Week -->
 		<section class="main__section main__section--this-week hidden">
 			<h1 class="main__title">This week</h1>
 			<ul class="main__list main__list--this-week">
@@ -110,13 +115,14 @@
 				</li>
 			</ul>
 		</section>
-		<section class="main__section main__section--project hidden">
-			<h1 class="main__title">Sample Project</h1>
-			<ul class="main__list main__list--tasks">
+		<!-- main section project -->
+		<section class="main__section main__section--project hidden" data-main-section-project>
+			<h1 class="main__title" data-project-title>Sample Project</h1>
+			<ul class="main__list main__list--project" data-project-task-list>
 				<li class="main__item">
 					<div class="main__item-left">
 						<i class="fa-regular fa-square"></i>
-						<p class="main__text">Sample Tasks Text</p>
+						<p class="main__text">Sample Project Text</p>
 					</div>
 					<div class="main__item-right">
 						<p class="main__text main__text--due-date">No Due Date</p>
@@ -124,7 +130,14 @@
 					<i class="fa-solid fa-xmark"></i>
 				</li>
 			</ul>
-			<div class="main__item">
+			<div class="main__item main__item--input-group hidden" data-main-item-input-group>
+				<input class="main__input" data-main-input type="text">
+				<div class="main__actions">
+				  <button class="main__button main__button--add" data-main-button-add>Add</button>
+				  <button class="main__button main__button--cancel" data-main-button-cancel>Cancel</button>
+				</div>
+			 </div>
+			<div class="main__item main__item--add-task" data-main-item-add-task>
 				<button class="main__button main__button--add-task">
 					<i class="fa-solid fa-plus"></i>Add Task
 				</button>
@@ -132,5 +145,4 @@
 		</section>
 	</main>
 </body>
-
 </html>
