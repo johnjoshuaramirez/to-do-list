@@ -11,7 +11,7 @@ const task_input_group = document.querySelector('[data-main-item-input-group]');
 const add_task_cancel_button = document.querySelector('[data-main-button-cancel]');
 const add_task_add_button = document.querySelector('[data-main-button-add]');
 const task_input = document.querySelector('[data-main-input]');
-
+const all_tasks_button = document.querySelector('[data-nav-item-all-tasks]');
 
 const projects = [
    {
@@ -35,6 +35,7 @@ add_task_button.addEventListener('click', show_task_input_group);
 add_task_cancel_button.addEventListener('click', hide_task_input_group);
 add_task_add_button.addEventListener('click', add_task);
 task_list.addEventListener('click', remove_task);
+all_tasks_button.addEventListener('click', show_all_tasks);
 
 function show_project_input_group() {
    project_input_group.classList.remove('hidden');
@@ -137,7 +138,6 @@ function add_task() {
 
    const project_index = project_title.dataset.index;
    projects[project_index].tasks.push(task_input.value.trim());
-   all_tasks.push(task_input.value.trim());
 
    clear(task_list);
    render_tasks(project_index);
@@ -156,13 +156,10 @@ function remove_task(e) {
 }
 
 function show_all_tasks() {
-   task_list.innerHTML += ``;
-   task_list.appendChild
 }
 
 render_projects();
 
-all_tasks_button.addEventListener('click', show_all_tasks);
 today_button.addEventListener('click', show_today_tasks);
 this_week_button.addEventListener('click', show_this_week_tasks);
 
